@@ -93,11 +93,6 @@
       "version": "3.4.0"
     },
     {
-      "name": "UnRAR",
-      "type": "haxelib",
-      "version": "1.0.0"
-    },
-    {
       "name": "away3d",
       "type": "git",
       "dir": null,
