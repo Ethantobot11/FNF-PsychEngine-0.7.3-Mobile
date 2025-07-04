@@ -1,6 +1,11 @@
 {
   "dependencies": [
     {
+      "name": "hxCodec",
+      "type": "haxelib",
+      "version": "3.0.2"
+    },
+    {
       "name": "hmm",
       "type": "haxelib",
       "version": "3.1.0"
