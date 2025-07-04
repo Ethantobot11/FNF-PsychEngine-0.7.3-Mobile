@@ -23,6 +23,13 @@
       "url": "https://github.com/th2l-devs/lime"
     },
     {
+      "name": "extension-androidtools",
+      "type": "git",
+      "dir": null,
+      "ref": null
+      "url": "https://github.com/MAJigsaw77/extension-androidtools"
+    },
+    {
       "name": "openfl",
       "type": "git",
       "dir": null,
