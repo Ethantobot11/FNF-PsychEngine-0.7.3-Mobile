@@ -1,6 +1,11 @@
 {
   "dependencies": [
     {
+      "name": "hmm",
+      "type": "haxelib",
+      "version": "3.1.0"
+    },
+    {
       "name": "hscript",
       "type": "haxelib",
       "version": "2.6.0"
