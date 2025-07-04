@@ -6,11 +6,36 @@ permissions:
   discussions: write
 
 env:
-  PROJECT_NAME: PsychEngine
+  PROJECT_NAME: PsychOnline
+  REPO_PATH: Ethantobot11/PIBBYAPOCALYPSE-ONLINE-
 
 jobs:
+  get-commit-hash:
+    runs-on: ubuntu-latest
+    outputs:
+      commit_hash: ${{ steps.get_commit_hash.outputs.COMMIT_HASH }}
+    steps:
+      - name: Check Repository
+        run: |
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+          echo "REPO_PATH: ${{ env.REPO_PATH }}"
+          if [[ "$GITHUB_REPOSITORY" != "${{ env.REPO_PATH }}" ]]; then
+            echo "Doesn't seem to be correct, returning SIGABRT..."
+            exit 6
+          else
+            echo "Seems to be correct..."
+          fi
+
+      - name: Get latest commit hash
+        id: get_commit_hash
+        run: |
+          commit_hash=${GITHUB_SHA::7}
+          echo "Latest commit hash is $commit_hash"
+          echo "::set-output name=COMMIT_HASH::$commit_hash"
+
   build:
     name: ${{ matrix.name }}
+    needs: get-commit-hash
     strategy:
       matrix:
         include:
@@ -26,12 +51,14 @@ jobs:
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
     uses: ./.github/workflows/build.yml
     with:
-        name: ${{ matrix.name }}
-              @@ -33,34 +28,24 @@
-        artifactPath: ${{ matrix.artifactPath }}
+       name: ${{ matrix.name }}
+       os: ${{ matrix.os }}       
+       buildArgs: ${{ matrix.buildArgs }}
+       artifactName: ${{ matrix.artifactName }}
+       artifactPath: ${{ matrix.artifactPath }}
 
   Releaser:
-    needs: [build]
+    needs: [get-commit-hash, build]
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
@@ -50,14 +77,14 @@ jobs:
            name: iOSBuild
            path: ${{ github.workspace }}
 
-      - name: Zip iOS Build For Release
-        run: zip -r /home/runner/${{ env.PROJECT_NAME }}-iOS.zip ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa
+      - name: Zip IOS File
+        run:  zip -r /home/runner/${{ env.PROJECT_NAME }}-iOS.zip ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa
 
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "PibbyApocalypse"
-          tag_name: "HOTFIX 0.71 ?"
+          name: "Release ${{ needs.get-commit-hash.outputs.commit_hash }}"
+          tag_name: "release-${{ needs.get-commit-hash.outputs.commit_hash }}"
           prerelease: false
           files: |
             /home/runner/*.apk
