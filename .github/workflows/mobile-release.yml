@@ -6,8 +6,8 @@ permissions:
   discussions: write
 
 env:
-  PROJECT_NAME: PsychOnline
-  REPO_PATH: Ethantobot11/PIBBYAPOCALYPSE-ONLINE-
+  PROJECT_NAME: PsychEngine
+  REPO_PATH: Ethantobot11/FNF-PsychEngine-0.7.3-Mobile
 
 jobs:
   get-commit-hash:
@@ -83,8 +83,8 @@ jobs:
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "Release ${{ needs.get-commit-hash.outputs.commit_hash }}"
-          tag_name: "release-${{ needs.get-commit-hash.outputs.commit_hash }}"
+          name: "PibbyApocalypse : Release"
+          tag_name: "HOTFIX 0.71 ?"
           prerelease: false
           files: |
             /home/runner/*.apk
