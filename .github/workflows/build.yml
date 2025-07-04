@@ -52,10 +52,10 @@ jobs:
       - name: Install Libraries
         run: |
           haxelib install hmm --quiet
+          haxelib --global update haxelib
           haxelib run hmm install --quiet
           haxelib run hmm reinstall 
           haxelib --global update haxelib
-          haxelib fixrepo
 
       - name: Configure Android
         if: inputs.name == 'Android'
