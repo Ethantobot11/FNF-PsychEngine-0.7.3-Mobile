@@ -1,21 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "hxCodec",
-      "type": "haxelib",
-      "version": "3.0.2"
-    },
-    {
-      "name": "hmm",
-      "type": "haxelib",
-      "version": "3.1.0"
-    },
-    {
-      "name": "hscript",
-      "type": "haxelib",
-      "version": "2.6.0"
-    },
-    {
       "name": "lime",
       "type": "git",
       "dir": null,
@@ -23,18 +8,9 @@
       "url": "https://github.com/th2l-devs/lime"
     },
     {
-      "name": "extension-androidtools",
-      "type": "git",
-      "dir": null,
-      "ref": null,
-      "url": "https://github.com/MAJigsaw77/extension-androidtools"
-    },
-    {
       "name": "openfl",
-      "type": "git",
-      "dir": null,
-      "ref": null,
-      "url": "https://github.com/th2l-devs/openfl"
+      "type": "haxelib",
+      "version": "9.3.2"
     },
     {
       "name": "flixel",
@@ -46,7 +22,7 @@
     {
       "name": "flixel-addons",
       "type": "haxelib",
-      "version": "3.3.2"
+      "version": "3.2.1"
     },
     {
       "name": "flixel-tools",
@@ -56,7 +32,7 @@
     {
       "name": "flixel-ui",
       "type": "haxelib",
-      "version": "2.6.4"
+      "version": "2.5.0"
     },
     {
       "name": "hxcpp",
@@ -66,9 +42,11 @@
       "url": "https://github.com/th2l-devs/hxcpp"
     },
     {
-      "name": "tjson",
-      "type": "haxelib",
-      "version": "1.4.0"
+      "name": "hxCodec",
+      "type": "git",
+      "dir": null,
+      "ref": "cafc58e9046505ff93fa659339808b53faa5d6f3",
+      "url": "https://github.com/polybiusproxy/hxCodec"
     },
     {
       "name": "SScript",
@@ -78,9 +56,16 @@
       "url": "https://github.com/th2l-devs/SScript"
     },
     {
-      "name": "hxdiscord_rpc",
+      "name": "tjson",
       "type": "haxelib",
-      "version": null
+      "version": "1.4.0"
+    },
+    {
+      "name": "hxdiscord_rpc",
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
     },
     {
       "name": "linc_luajit",
@@ -90,79 +75,18 @@
       "url": "https://github.com/th2l-devs/linc_luajit"
     },
     {
-      "name": "colyseus",
-      "type": "haxelib",
-      "version": "0.15.2"
-    },
-    {
-      "name": "HtmlParser",
-      "type": "haxelib",
-      "version": "3.4.0"
-    },
-    {
-      "name": "away3d",
-      "type": "git",
-      "dir": null,
-      "ref": "master",
-      "url": "https://github.com/Snirozu/away3d"
-    },
-    {
-      "name": "json2object",
-      "type": "haxelib",
-      "version": "3.11.0"
-    },
-    {
-      "name": "hxjsonast",
-      "type": "haxelib",
-      "version": "1.1.0"
-    },
-    {
       "name": "flxanimate",
       "type": "git",
       "dir": null,
-      "ref": "v4.0.0",
-      "url": "https://github.com/Dot-Stuff/flxanimate"
+      "ref": "dev",
+      "url": "https://github.com/ShadowMario/flxanimate.git"
     },
     {
-      "name": "lumod",
-      "type": "haxelib",
-      "version": "2.1.0"
-    },
-    {
-      "name": "actuate",
-      "type": "haxelib",
-      "version": "1.9.0"
-    },
-    {
-      "name": "compiletime",
-      "type": "haxelib",
-      "version": "2.8.0"
-    },
-    {
-      "name": "funkin.vis",
+      "name": "extension-androidtools",
       "type": "git",
       "dir": null,
-      "ref": "1966f8fbbbc509ed90d4b520f3c49c084fc92fd6",
-      "url": "https://github.com/FunkinCrew/funkVis"
-    },
-    {
-      "name": "grig.audio",
-      "type": "git",
-      "dir": null,
-      "ref": "162f924bdde427fc84af5b51961d2faef51f6955",
-      "url": "https://github.com/Snirozu/grig.audio"
-    },
-    {
-      "name": "tink_core",
-      "type": "haxelib",
-      "version": "2.1.1"
-    },
-    {
-      "name": "hxvlc",
-      "type": "git",
-      "dir": null,
-      "ref": null,
-      "url": "https://github.com/th2l-devs/hxvlc"
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/extension-androidtools"
     }
   ]
 }
