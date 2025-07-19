@@ -1,0 +1,314 @@
+Français (Europe)
+
+// Gameplay
+score_text : « Points : {1} | Échecs : {2} | Note : {3} »
+score_text_instakill : « Points : {1} | Note : {2} »
+botplay : « Automatique »
+
+rating_you_suck : « C'est horrible !»
+rating_shit : « Merde »
+rating_bad : « Mauvais »
+rating_bruh : « Mauvais »
+rating_meh : « Bof »
+rating_nice : « Pas mal »
+rating_good : « Bien »
+rating_great : « Excellent »
+rating_sick : « Fonce !»
+rating_perfect : « Parfait !»
+
+// Dialogues
+dialogue_skip: "Appuyer sur RETOUR pour passer"
+
+// Menu Pause
+pause_resume: "Reprendre"
+pause_restart_song: "Recommencer la chanson"
+pause_leave_charting_mode: "Quitter le mode Charter"
+pause_skip_time: "Durée de la chanson"
+pause_end_song: "Finir la chanson"
+pause_change_difficulty: "Modifier la difficulté"
+pause_toggle_practice_mode: "Activer le mode Entraînement"
+pause_toggle_botplay: "Activer le mode Auto"
+pause_options: "Options"
+pause_exit_to_menu: "Retour au menu"
+pause_back: "Retour"
+practice_mode: "Mode Entraînement"
+charting_mode: "Mode Charter"
+blueballed: "Broxadas: {1}"
+
+// Menu principal
+images/mainmenu/menu_story_mode: "images/pt-BR/mainmenu/menu_story_mode"
+images/mainmenu/menu_credits: "images/pt-BR/mainmenu/menu_credits"
+
+// Mode Histoire
+images/Menu_Tracks: "images/pt-BR/Menu_Tracks"
+week_score: "SCORE: {1}"
+
+storyname_week5: "RED BLIZZARD"
+storyname_week6: "Confrontation Simulator ft. Moawling"
+storyname_weekend1: "Retards de paiement"
+
+// Jeu libre
+personal_best: "MEILLEUR SCORE: {1} ({2}%)"
+freeplay_tip: "Appuyez sur {1} pour écouter la chanson / Appuyez sur {2} pour ouvrir le menu Mod / Appuyez sur {3} pour effacer votre score."
+
+musicplayer_playing: "MUSIQUE : {1}"
+musicplayer_paused: "MUSIQUE : {1} (EN PAUSE)"
+musicplayer_tip: "Appuyez sur {1} pour mettre en pause / Appuyez sur {2} pour quitter / Appuyez sur {3} pour relancer la musique"
+
+// Menu Mods
+no_mods_installed: "AUCUN MOD INSTALLÉ\nAPPUYEZ SUR {1} POUR QUITTER OU AJOUTER UN MOD"
+no_mods_found: "Aucun mod trouvé."
+mods_leave: "Appuyez sur {1} pour quitter"
+mod_restart: "* Déplacer ou changer de mod redémarrera le jeu."
+
+reload_button: "RECHARGER"
+enable_all_button: "TOUT ACTIVER"
+disable_all_button: "TOUT DÉSACTIVER"
+
+// Réinitialiser le score/succès
+reset_score: "Réinitialiser le score de"
+reset_achievement: "Réinitialiser le succès :"
+yes: "Oui"
+no: "Non"
+
+// Succès
+achievement_friday_night_play: "C'est vendredi"
+description_friday_night_play: "Jouer un vendredi soir."
+achievement_week1_nomiss: "Elle m'appelle aussi papa"
+description_week1_nomiss: "Terminer la semaine 1 en mode difficile sans faire d'erreur."
+achievement_week2_nomiss: "Fini les conneries"
+description_week2_nomiss: "Terminer la semaine 2 en mode difficile sans faire d'erreur."
+achievement_week3_nomiss: "Cible neutralisée"
+description_week3_nomiss: "Terminez la semaine 3 en mode difficile sans faire d'erreur."
+achievement_week4_nomiss: "Mangeur marié"
+description_week4_nomiss: "Terminez la semaine 4 en mode difficile sans faire d'erreur."
+achievement_week5_nomiss: "Noël aigre"
+description_week5_nomiss: "Terminez la semaine 5 en mode difficile sans faire d'erreur."
+achievement_week6_nomiss: "Nouveau record !!"
+description_week6_nomiss: "Terminez la semaine 6 en mode difficile sans faire d'erreur."
+achievement_week7_nomiss: "Fils de pute..."
+description_week7_nomiss: "Terminez la semaine 7 en mode difficile sans faire d'erreur."
+achievement_weekend1_nomiss: "Combattez sans perdre votre amitié"
+description_weekend1_nomiss: "Terminez le week-end 1 en mode difficile sans faire d'erreur."
+achievement_ur_bad: "Score désastreux !"
+description_ur_bad: "Terminez une chanson avec moins de 20 % de précision."
+achievement_ur_good: "Perfectionniste"
+description_ur_good: "Terminez une chanson avec 100 % de précision."
+achievement_roadkill_enthusiast: "Regardez toujours des deux côtés"
+description_roadkill_enthusiast: "Regardez les hommes de main se faire tuer 50 fois."
+achievement_oversinging: "Qui est le chanteur ?"
+description_oversinging: "Chantez pendant 10 secondes ou plus."
+achievement_hype: "TDAH"
+description_hype: "Terminez une chanson sans jamais vous arrêter."
+achievement_two_keys: "Maintenant, c'est juste toi et moi !"
+description_two_keys: "Termine une chanson en appuyant sur deux touches."
+achievement_toastie: "PC grille-pain"
+description_toastie: "Tu joues sur un PC Xuxa, hein ?"
+achievement_debugger: "Mode débogage"
+description_debugger: "Termine la chanson "Test" avec l'éditeur de graphiques."
+achievement_pessy_easter_egg: "Fille programmatrice"
+description_pessy_easter_egg: "Hé hé, tu m'as trouvée~!"
+
+// Options
+options_note_colors: "Coloration des notes"
+options_controls: "Contrôles"
+options_adjust_delay_and_combo: "Ajuster le délai et le combo"
+options_gameplay: "Gameplay"
+options_visuals: "Visuels"
+options_graphics: "Graphismes"
+options_language: "Langue"
+
+graphics_menu: "Paramètres graphiques"
+visuals_menu: "Options visuelles"
+gameplay_menu: "Paramètres de jeu"
+
+// Menu Couleurs des notes
+note_colors_tip: "Appuyez sur {1} pour réinitialiser la partie sélectionnée de la note."
+note_colors_hold_tip: "Maintenez {1} et appuyez sur RESET pour réinitialiser la note sélectionnée."
+
+note_colors_shift: "Maj"
+note_colors_lb: "Bouton gauche"
+
+// Menu Ajuster le délai et le combo
+delay_beat_hit: "Battement !" délai_courant_offset : « Délai : {1} ms » ;
+combo_rating_offset : « Décalage de note : »
+combo_numbers_offset : « Décalage des chiffres : »
+combo_offset : « Décalage de la liste déroulante » ;
+note_delay : « Délai de note » ; switch_on_button: "(Appuyez sur {1} pour changer)"
+
+//ControlsMenu
+keygroup_notes: "NOTES"
+keygroup_ui: "MENUS"
+keygroup_volume: "VOLUME"
+keygroup_debug: "DEBUG"
+
+key_note_left: "Gauche"
+key_note_down: "Bas"
+key_note_up: "Haut"
+key_note_right: "Droite"
+key_ui_left: "Gauche"
+key_ui_down: "Bas"
+key_ui_up: "Haut"
+key_ui_right: "Droite"
+key_reset: "Réinitialiser"
+key_accept: "Accepter"
+key_back: "Retour"
+key_pause: "Pause"
+key_volume_mute: "Muet"
+key_volume_up: "Plus"
+key_volume_down: "Moins"
+key_fullscreen: "Plein écran"
+key_debug_1: "Bouton 1"
+key_debug_2: "Bouton 2"
+
+controls_rebinding: "Permutation {1}"
+controls_rebinding2: "Maintenir {1} pour annuler\nMaintenir {2} pour effacer"
+reset_to_default_keys: "Rétablir les valeurs par défaut"
+
+// Modifications du gameplay
+setting_scroll_type: "Type de défilement"
+setting_scroll_type-multiplicative: "Multiplicatif"
+setting_scroll_type-constant: "Constante"
+setting_scroll_speed: "Vitesse de défilement"
+setting_playback_rate: "Accélération de la musique"
+setting_health_gain_multiplier: "Multiplicateur de santé" "Gagner"
+setting_health_loss_multiplier: "Multiplicateur de perte de santé"
+setting_instakill_on_miss: "Mort en cas d'échec"
+setting_practice_mode: Mode Entraînement
+setting_botplay : Mode Auto
+
+// Paramètres graphiques
+setting_low_quality : Faible qualité
+description_low_quality : Si cette option est cochée, désactive certains éléments d'arrière-plan, réduit le temps de chargement et améliore les performances.
+setting_anti-aliasing : Anti-aliasing
+description_anti-aliasing : Si cette option est décochée, l'anti-aliasing est désactivé, ce qui augmente les performances au détriment des graphismes.
+setting_shaders : Shaders
+description_shaders : Si cette option est décochée, désactive les shaders. Ils sont utilisés pour certains effets spéciaux et sont également gourmands en ressources pour les processeurs bas de gamme.
+setting_gpu_caching : Mise en cache GPU
+description_gpu_caching : Si cette option est cochée, le GPU peut être utilisé pour mettre en cache les textures, réduisant ainsi l'utilisation de la RAM. Ne l'activez pas si votre carte graphique est défectueuse.
+setting_framerate : Rafraîchir Rate"
+description_framerate: "Aussi appelé « Framerate », besoin d'explication ?"
+setting_fps_rework: "Réinitialiser les FPS"
+description_fps_rework: "Si cette option est cochée, le jeu sera plus fluide et moins lent lorsque le nombre d'images par seconde est inférieur à la limite. "
+
+// Paramètres visuels
+setting_note_skins: "Style de note"
+setting_note_skins-default: "Par défaut"
+setting_note_skins-future: "Futuriste"
+setting_note_skins-chip: "Puce"
+description_note_skins: "Choisissez votre style de note préféré."
+setting_note_splashes: "Impact de la note"
+setting_note_splashes-psych: "Psych"
+setting_note_splashes-diamond: "Diamant"
+setting_note_splashes-electric: "Électrique"
+setting_note_splashes-sparkles: "Éclat"
+setting_note_splashes-vanilla: "Original"
+description_note_splashes: "Choisissez votre style d'impact de note préféré."
+setting_note_splash_opacity: "Opacité du claquement"
+description_note_splash_opacity: "Transparence des claquements de notes."
+setting_hide_hud: "Masquer l'affichage tête haute"
+description_hide_hud: "Si cette case est cochée, la plupart des éléments de l'interface utilisateur seront masqués."
+setting_time_bar: "Barre de temps"
+setting_time_bar-time_left: "Temps restant"
+setting_time_bar-time_elapsed: "Temps écoulé"
+setting_time_bar-song_name: "Nom du morceau"
+setting_time_bar-disabled: "Désactivé"
+description_time_bar: "Que doit afficher la barre de temps ?"
+setting_flashing_lights: "Lumières clignotantes"
+description_flashing_lights: "Décochez cette case si vous Sensible aux lumières clignotantes !
+setting_camera_zooms: "Zoom de la caméra"
+description_camera_zooms: "Si cette case n'est pas cochée, la caméra ne zoomera pas sur les rythmes de la musique."
+setting_score_text_grow_on_hit: "Le texte de la partition s'agrandit à chaque coup"
+description_score_text_grow_on_hit: "Si cette case n'est pas cochée, le texte de la partition ne s'agrandit pas lorsque vous frappez une note."
+setting_health_bar_opacity: "Opacité de la barre de santé"
+description_health_bar_opacity: "Transparence de la barre de santé et des icônes."
+setting_fps_counter: "Compteur d'images par seconde"
+description_fps_counter: "Si cette case n'est pas cochée, le compteur est masqué en haut à gauche de l'écran."
+setting_vsync: "Synchronisation verticale"
+description_vsync: "Si cette case est cochée, la synchronisation verticale est activée, corrigeant les saccades de l'écran au prix d'une limitation des images par seconde à la fréquence de rafraîchissement de l'écran.\n(Redémarrer) le jeu pour l'effet)"
+setting_pause_music: "Musique en pause :"
+setting_pause_music-none: "Aucune"
+description_pause_music: "Quelle musique préférez-vous pour l'écran de pause ?"
+setting_check_for_updates: "Vérifier les mises à jour"
+description_check_for_updates: "Sur les versions officielles de Psych Engine, cochez cette case pour être averti des mises à jour au lancement du jeu."
+setting_discord_rich_presence: "Présence Discord Rich"
+description_discord_rich_presence: "Décochez cette case pour éviter les fuites accidentelles de votre mod. Cela masquera ce que vous jouez aux autres."
+setting_combo_stacking : « Empilage de combos »
+description_combo_stacking : « Si cette option est décochée, les numéros de combo ne s’empilent pas lorsque vous frappez une note, ce qui rend le jeu plus lisible.»
+
+// Paramètres de jeu
+setting_downscroll : « Défilement vers le bas »
+description_downscroll : « Si cette option est cochée, les notes défilent de haut en bas, contrairement à la valeur par défaut.»
+setting_middlescroll : « Défilement central »
+description_middlescroll : « Si cette option est cochée, vos notes et celles de votre adversaire seront centrées.»
+setting_opponent_notes : « Notes de l’adversaire »
+description_opponent_notes : « Si cette option est décochée, les notes de votre adversaire seront masquées.»
+setting_ghost_tapping : « Toucher fantôme »
+description_ghost_tapping : « Si cette option est cochée, vous ne recevrez aucune pénalité si vous appuyez sur des boutons alors qu’il n’y a aucune note à appuyer.»
+setting_auto_pause: "Pause automatique"
+description_auto_pause: "Si cette option est cochée, la fenêtre se met automatiquement en pause si elle n'est pas active."
+setting_pop_up_score: "Affichage pop-up du score"
+description_pop_up_score: "Si cette option n'est pas cochée, frapper des notes n'affichera pas les messages pop-up "malade", "bon" et combo.\n(Utile pour les téléphones bas de gamme)"
+setting_disable_reset_button: "Désactiver le bouton de réinitialisation"
+description_disable_reset_button: "Si cette option est cochée, appuyer sur Réinitialiser ne stoppe pas le lecteur."
+setting_hitsound_volume: "Volume sonore des notes"
+description_hitsound_volume: "Les notes émettent un "Tic-tac" lorsque vous les appuyez."
+setting_rating_offset: "Décalage des notes"
+description_rating_offset: "Avance/retarde le temps de frappe ; des valeurs plus élevées vous feront frapper plus tôt/plus tard."
+setting_sick_hit_window: "Fenêtre de frappe « Malade ! »"
+description_sick_hit_window: "Modifie le temps maximal pour atteindre une note « Malade ! » en millisecondes."
+setting_good_hit_window: "Fenêtre de frappe « Bon ! »"
+description_good_hit_window: "Modifie le temps maximal pour atteindre une note « Bonne » en millisecondes."
+setting_bad_hit_window: "Fenêtre de frappe « Mauvais »"
+description_bad_hit_window: "Modifie le temps maximal pour atteindre une note « Mauvais » en millisecondes."
+setting_safe_frames: "Images sûres"
+description_safe_frames: "Ajuste le temps supplémentaire ou réduit dont vous disposez pour jouer une note plus tôt ou plus tard."
+setting_sustains_as_one_note: "Notes longues soutenues"
+description_sustains_as_one_note: "Si coché, les notes longues ne peuvent pas être jouées si la note principale est manquée,\net cela compte comme un seul échec."
+
+// Écran de chargement
+now_loading: "Chargement {1}"
+
+// Difficultés
+difficulty_easy: "Facile"
+difficulty_normal: "Normal"
+difficulty_hard: "Difficile"
+
+images/menudifficulties/easy: "images/pt-BR/menudifficulties/easy"
+images/menudifficulties/hard: "images/pt-BR/menudifficulties/hard"
+
+// Mobile
+mobile_notice: "Notable!"
+mobile_success: "Réussi!"
+mobile_error: "Erreur!"
+touchpad_dpadmode_throw : « Le mode pavé tactile \"{1}\" n'existe pas.»
+touchpad_actionmode_throw : « Le mode action du pavé tactile \"{1}\" n'existe pas.»
+file_save_success : « {1} a été enregistré.»
+file_save_fail : « {1} n'a pas pu être enregistré.\n({2}) »
+permissions_message : « Si vous avez accepté les permissions, vous pouvez jouer !\nSi vous ne les avez pas acceptées, attendez la fermeture.\nAppuyez sur OK pour voir ce qui se passe. »
+create_directory_error : « Veuillez créer un répertoire pour\n{1}.\nAppuyez sur OK pour fermer le jeu. »
+
+// Menu de sélection des commandes mobiles
+mobileC_exitandsave : « Enregistrer et quitter »
+pad-extra_save : « Pad-Extra est simplement une option de liaison.\nVeuillez sélectionner une autre option pour quitter.»
+mobileC_reset : « Réinitialiser »
+mobileC_left : « GAUCHE »
+mobileC_down : « BAS »
+mobileC_up : « HAUT »
+mobileC_right : « DROITE »
+
+// Paramètres mobiles
+setting_extra_controls : « Contrôles supplémentaires »
+description_extra_controls : « Sélectionnez le nombre de boutons supplémentaires souhaités ?\nIls peuvent être utilisés avec des mécanismes comme LUA ou HScript. »
+setting_mobile_controls_opacity : « Opacité des contrôles mobiles »
+description_mobile_controls_opacity : « Sélectionne l'opacité des boutons mobiles (attention à ne pas la définir sur 0, car cela pourrait entraîner la perte de la position des boutons). »
+setting_allow_phone_screensaver: "Autoriser l'économiseur d'écran du téléphone"
+description_allow_phone_screensaver: "Si cette option est cochée, le téléphone s'éteindra après quelques secondes d'inactivité.\n(La durée dépend des paramètres de votre téléphone.) mobile)"
+setting_wide_screen_mode: "Mode écran large"
+description_wide_screen_mode: "Si cette option est cochée, le jeu s'étirera pour remplir l'écran. (ATTENTION : Peut entraîner une dégradation des graphismes et perturber certains mods qui redimensionnent le jeu et les caméras.)"
+setting_hitbox_design: "Design de la hitbox"
+description_hitbox_design: "Choisissez l'apparence de votre hitbox"
+setting_hitbox_position: "Position de la hitbox"
+description_hitbox_position: "Si cette option est cochée, la hitbox sera placée en bas de l'écran ; sinon, elle sera en haut de l'écran"
+setting_dynamic_controls_color: "Commandes dynamiques" Couleur
+description_dynamic_controls_color : « Si cette option est cochée, la couleur des commandes mobiles correspondra à celle des notes dans vos paramètres.\n(Affecte uniquement le gameplay) »
