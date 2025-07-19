@@ -20,11 +20,13 @@ jobs:
           - name: Android
             os: macos-15
             buildArgs: "android -final -D officialBuild"
+            setupCommand: sh ./setup/unix.sh
             artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
-            os: macos-15
+            os: macos-13
             buildArgs: "ios -final -nosign -D officialBuild"
+            setupCommand: sh ./setup/unix.sh
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
     uses: ./.github/workflows/build.yml
@@ -62,8 +64,8 @@ jobs:
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "0.7.3"
-          tag_name: "0.7.3"
+          name: "HOTIFX 0.71"
+          tag_name: "F YOU PIBBY"
           prerelease: false
           files: |
             /home/runner/*.apk
