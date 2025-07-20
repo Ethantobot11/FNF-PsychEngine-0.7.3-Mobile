@@ -6,8 +6,8 @@ permissions:
   discussions: write
 
 env:
-  PROJECT_NAME: PibbyEngine
-  REPO_PATH: Ethantobot11/PibbyEngine
+  PROJECT_NAME: PibbyEngine 0.7.3
+  REPO_PATH: Ethantobot11/FNF-PsychEngine-0.7.3-Mobile
 
 jobs:
   get-commit-hash:
