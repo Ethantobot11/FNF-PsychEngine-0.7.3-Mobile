@@ -7,7 +7,7 @@ permissions:
   discussions: write
 
 
-env
+env:
   PROJECT_NAME: PibbyEngine 0.7.3
 
 
