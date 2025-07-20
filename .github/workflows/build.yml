@@ -9,6 +9,9 @@ on:
       os:
         required: true
         type: string
+      setupCommand:
+        required: true
+        type: string
       buildArgs:
         required: true
         type: string
@@ -20,8 +23,8 @@ on:
         type: string
 
 env:
-  HAXE_VERSION: 4.3.7
-  PROJECT_NAME: PibbyEngine 0.7.3
+  HAXE_VERSION: 4.3.6
+  PROJECT_NAME: PibbyEngine
 
 jobs:
   build:
@@ -32,23 +35,22 @@ jobs:
         uses: actions/checkout@main
 
       - name: Setup Haxe
-        if: inputs.name != 'Linux ARM64'
         uses: krdlab/setup-haxe@master
         with:
           haxe-version: ${{ env.HAXE_VERSION }}
 
-      - name: Setup Haxe (Linux ARM)
-        if: inputs.name == 'Linux ARM64'
-        run: |
-          sudo add-apt-repository ppa:haxe/releases -y
-          sudo apt update
-          sudo apt-get install -y haxe neko
-          haxelib setup ~/haxelib
+      - name: Setup Android NDK
+        if: inputs.name == 'Android'
+        id: setup-ndk
+        uses: nttld/setup-ndk@main
+        with:
+          ndk-version: r27c
+          add-to-path: false
 
       - name: Install libVLC
         if: contains(inputs.name, 'Linux')
         run: sudo apt install libvlc-dev libvlccore-dev
-        
+
       - name: Install Libraries
         run: ${{ inputs.setupCommand }}
 
@@ -56,8 +58,8 @@ jobs:
         if: inputs.name == 'Android'
         run: |
           haxelib run lime config ANDROID_SDK $ANDROID_HOME
-          haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_LATEST_HOME
-          haxelib run lime config JAVA_HOME $JAVA_HOME_21_arm64
+          haxelib run lime config ANDROID_NDK_ROOT ${{ steps.setup-ndk.outputs.ndk-path }}
+          haxelib run lime config JAVA_HOME $JAVA_HOME_17_arm64
           haxelib run lime config ANDROID_SETUP true
 
       - name: Compile
