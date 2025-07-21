@@ -32,7 +32,7 @@ import flixel.input.mouse.FlxMouseButton;
 
 /**
  * A simple button class that calls a function when clicked by the touch.
- * @author: Karim Akra and Lily Ross (mcagabe19)
+ * @author: Karim Akra and Homura Akemi (HomuHomu833)
  */
 class TouchButton extends TypedTouchButton<FlxSprite>
 {
@@ -439,7 +439,7 @@ class TypedTouchButton<T:FlxSprite> extends FlxSprite implements IFlxInput
 		updateLabelPosition();
 
 		if (statusIndicatorType == BRIGHTNESS && label != null && brightShader != null)
-			label.shader = brightShader;
+			_spriteLabel.shader = brightShader;
 
 		return Value;
 	}
