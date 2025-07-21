@@ -1,6 +1,5 @@
 package psychlua;
 
-import haxe.extern.EitherType;
 import flixel.util.FlxSave;
 import openfl.utils.Assets;
 
@@ -13,7 +12,6 @@ class ExtraFunctions
 	public static function implement(funk:FunkinLua)
 	{
 		var lua:State = funk.lua;
-		
 		// Keyboard & Gamepads
 		Lua_helper.add_callback(lua, "keyboardJustPressed", function(name:String)
 		{
@@ -105,7 +103,7 @@ class ExtraFunctions
 		});
 
 		Lua_helper.add_callback(lua, "keyJustPressed", function(name:String = '') {
-			name = name.toLowerCase();
+			name = name.toLowerCase().trim();
 			switch(name) {
 				case 'left': return PlayState.instance.controls.NOTE_LEFT_P;
 				case 'down': return PlayState.instance.controls.NOTE_DOWN_P;
@@ -122,7 +120,7 @@ class ExtraFunctions
 			return false;
 		});
 		Lua_helper.add_callback(lua, "keyPressed", function(name:String = '') {
-			name = name.toLowerCase();
+			name = name.toLowerCase().trim();
 			switch(name) {
 				case 'left': return PlayState.instance.controls.NOTE_LEFT;
 				case 'down': return PlayState.instance.controls.NOTE_DOWN;
@@ -139,7 +137,7 @@ class ExtraFunctions
 			return false;
 		});
 		Lua_helper.add_callback(lua, "keyReleased", function(name:String = '') {
-			name = name.toLowerCase();
+			name = name.toLowerCase().trim();
 			switch(name) {
 				case 'left': return PlayState.instance.controls.NOTE_LEFT_R;
 				case 'down': return PlayState.instance.controls.NOTE_DOWN_R;
@@ -158,28 +156,31 @@ class ExtraFunctions
 
 		// Save data management
 		Lua_helper.add_callback(lua, "initSaveData", function(name:String, ?folder:String = 'psychenginemods') {
-			if(!PlayState.instance.modchartSaves.exists(name))
+			var variables = MusicBeatState.getVariables();
+			if(!variables.exists('save_$name'))
 			{
 				var save:FlxSave = new FlxSave();
 				// folder goes unused for flixel 5 users. @BeastlyGhost
 				save.bind(name, CoolUtil.getSavePath() + '/' + folder);
-				PlayState.instance.modchartSaves.set(name, save);
+				variables.set('save_$name', save);
 				return;
 			}
 			FunkinLua.luaTrace('initSaveData: Save file already initialized: ' + name);
 		});
 		Lua_helper.add_callback(lua, "flushSaveData", function(name:String) {
-			if(PlayState.instance.modchartSaves.exists(name))
+			var variables = MusicBeatState.getVariables();
+			if(variables.exists('save_$name'))
 			{
-				PlayState.instance.modchartSaves.get(name).flush();
+				variables.get('save_$name').flush();
 				return;
 			}
 			FunkinLua.luaTrace('flushSaveData: Save file not initialized: ' + name, false, false, FlxColor.RED);
 		});
 		Lua_helper.add_callback(lua, "getDataFromSave", function(name:String, field:String, ?defaultValue:Dynamic = null) {
-			if(PlayState.instance.modchartSaves.exists(name))
+			var variables = MusicBeatState.getVariables();
+			if(variables.exists('save_$name'))
 			{
-				var saveData = PlayState.instance.modchartSaves.get(name).data;
+				var saveData = variables.get('save_$name').data;
 				if(Reflect.hasField(saveData, field))
 					return Reflect.field(saveData, field);
 				else
@@ -189,18 +190,20 @@ class ExtraFunctions
 			return defaultValue;
 		});
 		Lua_helper.add_callback(lua, "setDataFromSave", function(name:String, field:String, value:Dynamic) {
-			if(PlayState.instance.modchartSaves.exists(name))
+			var variables = MusicBeatState.getVariables();
+			if(variables.exists('save_$name'))
 			{
-				Reflect.setField(PlayState.instance.modchartSaves.get(name).data, field, value);
+				Reflect.setField(variables.get('save_$name').data, field, value);
 				return;
 			}
 			FunkinLua.luaTrace('setDataFromSave: Save file not initialized: ' + name, false, false, FlxColor.RED);
 		});
 		Lua_helper.add_callback(lua, "eraseSaveData", function(name:String)
 		{
-			if (PlayState.instance.modchartSaves.exists(name))
+			var variables = MusicBeatState.getVariables();
+			if (variables.exists('save_$name'))
 			{
-				PlayState.instance.modchartSaves.get(name).erase();
+				variables.get('save_$name').erase();
 				return;
 			}
 			FunkinLua.luaTrace('eraseSaveData: Save file not initialized: ' + name, false, false, FlxColor.RED);
@@ -209,23 +212,14 @@ class ExtraFunctions
 		// File management
 		Lua_helper.add_callback(lua, "checkFileExists", function(filename:String, ?absolute:Bool = false) {
 			#if MODS_ALLOWED
-			if(absolute)
-			{
-				return FileSystem.exists(filename);
-			}
+			if(absolute) return FileSystem.exists(filename);
 
-			var path:String = Paths.modFolders(filename);
-			if(FileSystem.exists(path))
-			{
-				return true;
-			}
-			return FileSystem.exists(Paths.getPath('assets/$filename', TEXT));
+			return FileSystem.exists(Paths.getPath(filename, TEXT));
+
 			#else
-			if(absolute)
-			{
-				return Assets.exists(filename);
-			}
-			return Assets.exists(Paths.getPath('assets/$filename', TEXT));
+			if(absolute) return Assets.exists(filename, TEXT);
+
+			return Assets.exists(Paths.getPath(filename, TEXT));
 			#end
 		});
 		Lua_helper.add_callback(lua, "saveFile", function(path:String, content:String, ?absolute:Bool = false)
@@ -244,23 +238,12 @@ class ExtraFunctions
 			}
 			return false;
 		});
-		Lua_helper.add_callback(lua, "deleteFile", function(path:String, ?ignoreModFolders:Bool = false)
+		Lua_helper.add_callback(lua, "deleteFile", function(path:String, ?ignoreModFolders:Bool = false, ?absolute:Bool = false)
 		{
 			try {
-				#if MODS_ALLOWED
-				if(!ignoreModFolders)
-				{
-					var lePath:String = Paths.modFolders(path);
-					if(FileSystem.exists(lePath))
-					{
-						FileSystem.deleteFile(lePath);
-						return true;
-					}
-				}
-				#end
-
-				var lePath:String = Paths.getPath(path, TEXT);
-				if(Assets.exists(lePath))
+				var lePath:String = path;
+				if(!absolute) lePath = Paths.getPath(path, TEXT, !ignoreModFolders);
+				if(FileSystem.exists(lePath))
 				{
 					FileSystem.deleteFile(lePath);
 					return true;
