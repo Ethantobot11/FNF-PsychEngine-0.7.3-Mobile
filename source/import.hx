@@ -14,7 +14,7 @@ import llua.Lua;
 import backend.Achievements;
 #end
 
-//Mobile Controls
+// Mobile Controls
 import mobile.objects.MobileControls;
 import mobile.objects.IMobileControls;
 import mobile.objects.Hitbox;
@@ -56,7 +56,10 @@ import backend.Conductor;
 import backend.BaseStage;
 import backend.Difficulty;
 import backend.Mods;
+import backend.Language;
 import mobile.backend.StorageUtil;
+
+import backend.ui.*; //Psych-UI
 
 import objects.Alphabet;
 import objects.BGSprite;
@@ -66,6 +69,7 @@ import states.LoadingState;
 
 #if flxanimate
 import flxanimate.*;
+import flxanimate.PsychFlxAnimate as FlxAnimate;
 #end
 
 //Flixel
@@ -83,6 +87,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.group.FlxSpriteGroup;
 import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.addons.transition.FlxTransitionableState;
 import shaders.flixel.system.FlxShader;
 
 using StringTools;
