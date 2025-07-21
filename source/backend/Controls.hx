@@ -82,18 +82,19 @@ class Controls
 	private function get_PAUSE() return justPressed('pause');
 	private function get_RESET() return justPressed('reset');
 
-
 	//Gamepad, Keyboard & Mobile stuff
 	public var keyboardBinds:Map<String, Array<FlxKey>>;
 	public var gamepadBinds:Map<String, Array<FlxGamepadInputID>>;
 	public var mobileBinds:Map<String, Array<MobileInputID>>;
-
 	public function justPressed(key:String)
 	{
 		var result:Bool = (FlxG.keys.anyJustPressed(keyboardBinds[key]) == true);
 		if(result) controllerMode = false;
 
-		return result || _myGamepadJustPressed(gamepadBinds[key]) == true || mobileCJustPressed(mobileBinds[key]) == true || touchPadJustPressed(mobileBinds[key]) == true;
+		return result
+			|| _myGamepadJustPressed(gamepadBinds[key]) == true
+			|| mobileCJustPressed(mobileBinds[key]) == true
+			|| touchPadJustPressed(mobileBinds[key]) == true;
 	}
 
 	public function pressed(key:String)
@@ -101,7 +102,10 @@ class Controls
 		var result:Bool = (FlxG.keys.anyPressed(keyboardBinds[key]) == true);
 		if(result) controllerMode = false;
 
-		return result || _myGamepadPressed(gamepadBinds[key]) == true || mobileCPressed(mobileBinds[key]) == true || touchPadPressed(mobileBinds[key]) == true;
+		return result
+			|| _myGamepadPressed(gamepadBinds[key]) == true
+			|| mobileCPressed(mobileBinds[key]) == true
+			|| touchPadPressed(mobileBinds[key]) == true;
 	}
 
 	public function justReleased(key:String)
@@ -109,7 +113,10 @@ class Controls
 		var result:Bool = (FlxG.keys.anyJustReleased(keyboardBinds[key]) == true);
 		if(result) controllerMode = false;
 
-		return result || _myGamepadJustReleased(gamepadBinds[key]) == true || mobileCJustReleased(mobileBinds[key]) == true || touchPadJustReleased(mobileBinds[key]) == true;
+		return result
+			|| _myGamepadJustReleased(gamepadBinds[key]) == true
+			|| mobileCJustReleased(mobileBinds[key]) == true
+			|| touchPadJustReleased(mobileBinds[key]) == true;
 	}
 
 	public var controllerMode:Bool = false;
@@ -244,11 +251,10 @@ class Controls
 
 	// IGNORE THESE/ karim: no.
 	public static var instance:Controls;
-
 	public function new()
 	{
-		gamepadBinds = ClientPrefs.gamepadBinds;
 		keyboardBinds = ClientPrefs.keyBinds;
+		gamepadBinds = ClientPrefs.gamepadBinds;
 		mobileBinds = ClientPrefs.mobileBinds;
 	}
 }
