@@ -62,6 +62,9 @@ jobs:
           haxelib run lime config JAVA_HOME $JAVA_HOME_17_arm64
           haxelib run lime config ANDROID_SETUP true
 
+      - name: lime clean? 
+        run: lime clean ios
+         
       - name: Compile
         run: haxelib run lime build ${{ inputs.buildArgs }}
 
