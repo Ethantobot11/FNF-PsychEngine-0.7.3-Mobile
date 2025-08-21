@@ -7,8 +7,9 @@
     },
     {
       "name": "lime",
-      "type": "haxelib",
-      "version": "7.9.0"
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/th2l-devs/lime"
     },
     {
       "name": "openfl",
@@ -19,18 +20,20 @@
       "name": "flixel",
       "type": "git",
       "dir": null,
-      "ref": null,
-      "url": "https://github.com/HomuHomu833/flixel"
+      "ref": "main",
+      "url": "https://github.com/th2l-devs/flixel"
     },
     {
       "name": "flixel-addons",
-      "type": "haxelib",
-      "version": "3.2.1"
+      "type": "git",
+      "ref" : "main",
+      "url": "https://github.com/th2l-devs/flixel-addons"
     },
     {
       "name": "flixel-tools",
-      "type": "haxelib",
-      "version": "1.5.1"
+      "type": "git",
+      "ref": "main",
+      "url": "https://github.com/th2l-devs/flixel-tools"
     },
     {
       "name": "flixel-ui",
@@ -45,11 +48,11 @@
       "url": "https://github.com/th2l-devs/hxcpp"
     },
     {
-      "name": "hxCodec",
+      "name": "hxvlc",
       "type": "git",
       "dir": null,
       "ref": "cafc58e9046505ff93fa659339808b53faa5d6f3",
-      "url": "https://github.com/polybiusproxy/hxCodec"
+      "url": "https://github.com/th2l-devs/hxvlc"
     },
     {
       "name": "SScript",
@@ -68,7 +71,7 @@
       "type": "git",
       "dir": null,
       "ref": "main",
-      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
+      "url": "https://github.com/th2l-devs/hxdiscord_rpc"
     },
     {
       "name": "linc_luajit",
