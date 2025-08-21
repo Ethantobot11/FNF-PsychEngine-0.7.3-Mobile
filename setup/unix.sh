@@ -9,7 +9,7 @@ echo Installing dependencies...
 echo This might take a few moments depending on your internet speed.
 haxelib git hxcpp https://github.com/th2l-devs/hxcpp --quiet
 haxelib git lime https://github.com/th2l-devs/lime --quiet
-haxelib git openfl https://github.com/th2l-devs/lime --quiet
+haxelib git openfl https://github.com/th2l-devs/openfl --quiet
 haxelib git flixel https://github.com/th2l-devs/flixel --quiet
 haxelib git flixel-addons https://github.com/th2l-devs/flixel-addons --quiet
 haxelib git flixel-tools https://github.com/th2l-devs/flixel-tools --quiet
