@@ -63,7 +63,7 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
 
       - name: lime clean? 
-        run: lime clean ios
+        run: haxelib run lime clean ios
          
       - name: Compile
         run: haxelib run lime build ${{ inputs.buildArgs }}
