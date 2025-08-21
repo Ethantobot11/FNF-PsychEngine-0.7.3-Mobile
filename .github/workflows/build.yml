@@ -62,8 +62,11 @@ jobs:
           haxelib run lime config JAVA_HOME $JAVA_HOME_17_arm64
           haxelib run lime config ANDROID_SETUP true
 
-      - name: lime clean? 
-        run: haxelib run lime clean ios
+      - name: Clean iOS
+        if: inputs.name == 'iOS'
+        run: |
+          cd $GITHUB_WORKSPACE   # adjust if Project.xml is in subfolder
+          haxelib run lime clean ios
          
       - name: Compile
         run: haxelib run lime build ${{ inputs.buildArgs }}
