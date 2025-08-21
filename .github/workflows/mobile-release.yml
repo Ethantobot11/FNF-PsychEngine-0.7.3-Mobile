@@ -48,7 +48,7 @@ jobs:
           - name: iOS
             os: macos-13
             setupCommand: sh ./setup/unix.sh
-            buildArgs: "ios -final -nosign -D -ARM64_ONLY officialBuild"
+            buildArgs: "ios -final -nosign -D --ios-arch arm64 officialBuild"
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
     uses: ./.github/workflows/build.yml
